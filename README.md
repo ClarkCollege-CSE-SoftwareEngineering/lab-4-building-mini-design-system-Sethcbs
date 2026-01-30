@@ -624,3 +624,58 @@ Run `npm run test:coverage` and open `coverage/index.html` in a browser to see w
 - 🔗 [Atomic Design Chapter 2](https://atomicdesign.bradfrost.com/chapter-2/)
 - 🔗 [React Testing Library Documentation](https://testing-library.com/docs/)
 - 🔗 [Vitest Documentation](https://vitest.dev/)
+
+Seth Stigall 1/29/2026
+
+Reflection Questions
+
+  2.3 Reflection Question
+  
+    You would only need to update the value of your spacing variables in order to
+    update all of them. This is ultimately the purpose of using variables over
+    hard coded values or "magic numbers"
+
+ 3.3 Reflection Question
+
+    To my understanding you would only need to update the buttons in the atoms/
+    Button.tsx file and then everywhere that 'atom' exsists would get updated.
+ 
+ 4.2 Reflection Question
+
+    -Composing the Alert molecule from Icon, Text, and Button atoms demonstrates 
+    the value of atomic design, because now we can create new molecules that 
+    aren't the Alert and it would have a consistent style. This would also help
+    us with ease of modification because we can now just edit our atoms and the
+    molecules will be updated accordingly.
+  
+    -Design tokens help by setting the values such as the colors for hovering,
+    clicking, errors, etc. They also allow us to set the values for spacing or
+    alignment. This helps by giving us the ability to maintain consistency in
+    our styling throughout our componenets, and it makes it easy to adjust them
+    by only needing to be updated in one file.
+
+    -To add a dark mode to our design system we would only need to add new color
+    tokens that we could set as options for our design system to use. We could,
+    for example, make a color.theme section that has two options. The options 
+    could both then have sets of colors that will be labeled as 'background', 
+    'border', 'shadow'. Then each component could simply use the 
+    color.theme.dark.background and all the components would be using our dark
+    theme background.
+
+Key Concepts:
+
+  - The value of thinking about your design system as a collection of atoms,
+    molecules, and organisms. It helps to separate the responsabilities of
+    each element and encourages you to design them in a way that will make 
+    the design easier to maintain in the future.
+
+  - How important it can be to plan out ahead what you want your system design
+    to be and then using something like the template phase to see if that's
+    the right direction for this project. This helps to prevent wasting time 
+    of fully fleshing out a project.
+
+  - Using the Page phase can also be used in a similar way of checking how 
+    your project is turning out, but it provides important context of how it's
+    developing with real items like images or text. Context is important when
+    developing your system because while some elements may look good in a
+    vacuum they might not look good near other elements.

@@ -2,25 +2,25 @@ import React from 'react';
 import { colors, spacing, typography } from '../../tokens';
 
 export interface ButtonProps {
-    children: React.ReactNode;
-    onClick?: () => void;
-    variant?: 'primary' | 'secondary' | 'ghost';
-    size?: 'sm' | 'md' | 'lg';
-    disabled?: boolean;
-    'aria-label'?: string;
-    type?: 'button' | 'submit' | 'reset';
+  children: React.ReactNode;
+  onClick?: () => void;
+  variant?: 'primary' | 'secondary' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  disabled?: boolean;
+  'aria-label'?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 //The button atom, functional on its own, but designed
 //to be incorporated into a larger piece of the puzzle
 export function Button({
-    children,
-    onClick,
-    variant = 'primary',
-    size = 'md',
-    disabled = false,
-    'aria-label': ariaLabel,
-    type = 'button',
+  children,
+  onClick,
+  variant = 'primary',
+  size = 'md',
+  disabled = false,
+  'aria-label': ariaLabel,
+  type = 'button',
 }: ButtonProps) {
   // sizing styles using spacing and typography tokens
   const sizeStyles: Record<string, React.CSSProperties> = {
@@ -58,7 +58,7 @@ export function Button({
   };
   //base style settings for the font 
   //and the alignment of elements
-    const baseStyle: React.CSSProperties = {
+  const baseStyle: React.CSSProperties = {
     fontFamily: typography.fontFamily.base,
     fontWeight: typography.fontWeight.medium,
     borderRadius: '4px',
